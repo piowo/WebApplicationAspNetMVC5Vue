@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div id="app">
+
+<div class="jumbotron">
+    <h1>ASP.NET & Vue</h1>
+    <p class="lead">Oto przykład aplikacji web napisanej w ASP.NET MVC 5 z użyciem Vue 2.0!!!</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Wystartujmy!</h2>
+        <p>
+           Oto przykład wyświetlania listy zakupów!
+        </p>
+            <h2>{{ title }}</h2>
+            <ul>
+                <li v-for="item in items">{{ item }}</li>
+                <li>{{ napis }}</li>
+            </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Tworzenie projektów</h2>
+        <p>Jeśli na serio chcesz tworzyć profesjonalne projekty, nie zapomnij skorzystać z Vue !!!</p>
+        <p>@Html.ActionLink("Zgadzam się", "Odpowiedz", "Home")</p>
+        <br />
+            <p>{{ napis }}</p>
+    </div>
+</div>
+
+</div>
+
+<script>
+    var data = {
+        items: ['Banany', 'Jabłka'],
+        title: 'Moja lista zakupów',
+        napis: 'Hello! Kolejna próba Vue!'
+    };
+    new Vue({
+        el: '#app',
+        data: data
+    });
+</script>

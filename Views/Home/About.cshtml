@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "O aplikacji!";
+}
+<div id="app">
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Ta aplikacja została stworzona 09.02.2022 <br /> 
+   Jest pierwszym dziełem autora, mającym na celu zachęcenie go do intensywnej pracy nad ASP.Net & Vue!</p>
+<p> {{ napis }}</p>
+
+</div>
+
+<script>
+    var data = {
+        napis: 'To jest próba Vue!'
+    };
+    new Vue({
+        el: '#app',
+        data: data
+    });
+</script>
